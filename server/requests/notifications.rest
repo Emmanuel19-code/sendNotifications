@@ -3,5 +3,5 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "notification":"We will be having a schedule maintenance in our system"
+    "notification":"first test"
 }

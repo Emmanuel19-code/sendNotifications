@@ -20,7 +20,5 @@ io.on('connection', (socket) => {
 export const sendNotificatonMessage = (message)=>{
     if(io){
         io.emit('notification',message)
-    }else{
-        io.emit('notification',message)
     }
 }
