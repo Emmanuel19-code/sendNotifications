@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socket Io</title>
+</head>
+<body>
+    <p class="notification"></p>
+   <script src="/socket.io/socket.io.js"></script>
+<script>
+    const notification = document.querySelector(".notification")
+    
+    const socket = io();
+    socket.connect("http://localhost:3000")
+     socket.on('notification', (msg) => {
+            //notification.innerHTML = msg
+            localStorage.setItem("notifications",msg)
+        });
+   let notify=localStorage.getItem("notifications")
+   notification.innerHTML=notify
+</script>
+</body>
+</html>
